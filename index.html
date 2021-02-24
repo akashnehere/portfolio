@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Nehere</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./fonts/Poppins-Thin.ttf">
+    <link rel="stylesheet" href="./fonts/Poppins-Medium.ttf">
+    <link rel="stylesheet" href="./fonts/Poppins-Regular.ttf">
+    <link rel="icon" href="./images/icon.png">
+</head>
+
+<body>
+
+    <!-- Navigation Bar Code -->
+    <nav class="navigation-bar">
+        <label class="logo">#akashNehere/></label>
+        <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#technologies">technologies</a></li>
+            <li><a href="#contact-me">contact me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Page Code -->
+    <div class="card">
+        <div class="information">
+            <p>Akash Balasaheb Nehere</p>
+            <img src="./images/avatar.jpg" class="avatar">
+            <p>Web Application Developer</p>
+        </div>
+        <div class="links">
+            <a href="https://github.com/anehere" target="_blank">
+                <img class="link-logo" src="./images/github-logo-64px.png">
+            </a>
+            <a href="https://www.linkedin.com/in/akash-nehere" target="_blank">
+                <img class="link-logo" src="./images/linkedin-logo.svg" />
+            </a>
+            <a href="https://www.instagram.com/akash.nehere/" target="_blank">
+                <img class="link-logo" src="./images/instagram-logo.svg" />
+            </a>
+        </div>
+    </div>
+
+    <!-- Technical Information -->
+    <div class="card" id="technologies">
+        <p class="heading">Technical Information : /></p>
+        <div class="technical">
+            <div class="entry">
+                <p class="skills">Java</p>
+                <progress class="progress" value="75" max="100"></progress>
+            </div>
+            <div class="entry">
+                <p class="skills">Spring Boot</p>
+                <progress class="progress" value="60" max="100"></progress>
+            </div>
+            <div class="entry">
+                <p class="skills">Angular</p>
+                <progress class="progress" value="60" max="100"></progress>
+            </div>
+            <div class="entry">
+                <p class="skills">HTML</p>
+                <progress class="progress" value="70" max="100"></progress>
+            </div>
+            <div class="entry">
+                <p class="skills">JavaScript</p>
+                <progress class="progress" value="50" max="100"></progress>
+            </div>
+            <div class="entry">
+                <p class="skills">Git</p>
+                <progress class="progress" value="75" max="100"></progress>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="card" id="about">
+        <p class="heading">About Me : /></p>
+        <p style="margin: 2%;">Java Developer with knowledge of Front-End technologies having industry experience of web
+            applications as well as desktop applications.</p>
+        <p style="margin: 2%;">Hobbies : />
+        <ul style="margin: 2%; list-style: inside;">
+            <li>Motorcycle Riding</li>
+            <li>Travelling</li>
+            <li>Cycling</li>
+            <li>Trekking</li>
+        </ul>
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="contact-me">
+        <div class="contact-me">
+            <p class="heading">Contact Me</p>
+            <p>Email: akashnehere@gmail.com</p>
+            <p>Mobile Number: +91 9096999403</p>
+        </div>
+        <p class="copyright-section">© Akash Nehere 2021</p>
+    </div>
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script>
+        $(window).scroll(function () {
+            var style = getComputedStyle(document.body);
+            var theme = (style.getPropertyValue('--theme'));
+            if ($(window).scrollTop() >= 50) {
+                $('.navigation-bar').css('background', theme);
+            } else {
+                $('.navigation-bar').css('background', 'transparent');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
