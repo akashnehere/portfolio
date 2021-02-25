@@ -14,9 +14,11 @@
 }
 
 :root {
-    --theme: #087099;
-    --text-color: white;
-    --main-background: #132e57;
+    /* --theme: #087099; */
+    --theme: white;
+    --text-color: black;
+    /* --main-background: #132e57; */
+    --main-background: white;
 }
 
 * {
@@ -49,9 +51,9 @@ nav {
 
 label.logo {
     color: var(--text-color);
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 50px;
+    font-size: 200%;
+    line-height: 250%;
+    padding: 0 5%;
     cursor: pointer;
 }
 
@@ -79,20 +81,21 @@ nav ul li a:hover, a:active {
 }
 
 .card {
-    margin-top: 150px;
-    margin-left: 250px;
-    margin-right: 250px;
-    border-radius: 20px;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 2%;
     background: var(--theme);
     border-style: solid;
-    height: 500px;
-    font-size: 25px;
+    height: 300%;
+    font-size: 150%;
     color: var(--text-color);
     display: grid;
 }
 
 .information {
-    line-height: 100px;
+    margin-top: 5%;
+    line-height: 250%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,10 +113,11 @@ nav ul li a:hover, a:active {
 }
 
 .links {
+    margin-top: 2.5%;
+    margin-bottom: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0%;
 }
 
 .avatar {
