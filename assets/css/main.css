@@ -2348,3 +2348,212 @@ ul.actions.special {
 	border: white;
 	border-width: 20px;
 }
+.progress-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px
+}
+
+.progress {
+    height: 20px;
+    background: #333;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible
+}
+
+.progress .progress-bar {
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s
+}
+
+.progress .progress-value {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    position: absolute;
+    top: -30px;
+    right: -25px
+}
+
+.progress .progress-bar:after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    background: #fff;
+    position: absolute;
+    top: -5px;
+    bottom: -25px;
+    right: -5px;
+    /* z-index: 1; */
+    /* transform: rotate(35deg) */
+}
+
+.service-logo {
+	border-radius: 15px;
+	height: 150px;
+	width: 150px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border: white;
+	border-width: 20px;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+}
+
+.main-heading h3 {
+	text-transform: capitalize;
+}
+
+
+header .item {
+	height: 100vh;
+	position: relative;
+  }
+  header .item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  header .item .cover {
+	padding: 75px 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+  }
+  header .item .cover .header-content {
+	position: relative;
+	padding: 56px;
+	overflow: hidden;
+  }
+  header .item .cover .header-content .line {
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	border: 9px solid #fff;
+	-webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+	clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+  }
+  header .item .cover .header-content h2 {
+	font-weight: 300;
+	font-size: 35px;
+	color: #fff;
+  }
+  header .item .cover .header-content h1 {
+	font-size: 56px;
+	font-weight: 600;
+	margin: 5px 0 20px;
+	word-spacing: 3px;
+	color: #fff;
+  }
+  header .item .cover .header-content h4 {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 36px;
+	color: #fff;
+  }
+  header .owl-item.active h1 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: fadeInDown;
+	animation-delay: 0.3s;
+  }
+  header .owl-item.active h2 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: fadeInDown;
+	animation-delay: 0.3s;
+  }
+  header .owl-item.active h4 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: fadeInUp;
+	animation-delay: 0.3s;
+  }
+  header .owl-item.active .line {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: fadeInLeft;
+	animation-delay: 0.3s;
+  }
+  header .owl-nav .owl-prev {
+	position: absolute;
+	left: 15px;
+	top: 43%;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+	background: rgba(0, 0, 0, 0.5) !important;
+	width: 40px;
+	cursor: pointer;
+	height: 40px;
+	position: absolute;
+	display: block;
+	z-index: 1000;
+	border-radius: 0;
+  }
+  header .owl-nav .owl-prev span {
+	font-size: 1.6875rem;
+	color: #fff;
+  }
+  header .owl-nav .owl-prev:focus {
+	outline: 0;
+  }
+  header .owl-nav .owl-prev:hover {
+	background: #000 !important;
+  }
+  header .owl-nav .owl-next {
+	position: absolute;
+	right: 15px;
+	top: 43%;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+	background: rgba(0, 0, 0, 0.5) !important;
+	width: 40px;
+	cursor: pointer;
+	height: 40px;
+	position: absolute;
+	display: block;
+	z-index: 1000;
+	border-radius: 0;
+  }
+  header .owl-nav .owl-next span {
+	font-size: 1.6875rem;
+	color: #fff;
+  }
+  header .owl-nav .owl-next:focus {
+	outline: 0;
+  }
+  header .owl-nav .owl-next:hover {
+	background: #000 !important;
+  }
+  header:hover .owl-prev {
+	left: 0px;
+	opacity: 1;
+  }
+  header:hover .owl-next {
+	right: 0px;
+	opacity: 1;
+  }
