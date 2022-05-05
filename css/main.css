@@ -1,0 +1,9 @@
+*{margin: 0; padding: 0;}
+
+.main-area {
+    height: 30em;
+    width: 100%;
+    background-color: #808080;
+
+    background-image: linear-gradient(to right, #000000, #808080);
+}
