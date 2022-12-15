@@ -1,0 +1,197 @@
+.mainContent {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* For Typing card */
+.overlay {
+  width: 100%;
+  max-width: 50vw;
+  max-height: 1vh;
+  padding: 5vw;
+  margin: 5vw;
+  display: flex;
+  align-items: center;
+  background: #191c29;
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Typing style */
+.typing {
+  display: flex;
+  align-content: center;
+  background-color: #191c29;
+}
+
+.typing h1 {
+  background-color: #191c29;
+  width: 100%;
+  /* font-size: 5em; */
+  font-weight: 100;
+  font-size: 500%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.1em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 5s steps(15, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.card {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  color: white;
+}
+
+.card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+
+.card::before {
+  content: "Hover on Me";
+  color: white;
+  width: 101%;
+  height: 103%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1.25%;
+  left: -0.5%;
+  animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "Hover on me";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.social_media_logo {
+  width: 5%;
+  height: 5%;
+  margin: 2%;
+  transition: transform 0.5s ease-out;
+}
+
+.social_media_logo:hover {
+  transform: scale(1.2);
+}
+
+.bottom {
+  justify-content: space-around;
+  margin-left: 35%;
+  margin-top: 0.5%;
+}
+
+.mobile_bottom {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .typing h1 {
+    font-size: 2.4rem;
+  }
+
+  .overlay {
+    width: 100%;
+    max-width: 80vw;
+    max-height: 20vh;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+  }
+
+  .card {
+    height: 40%;
+  }
+
+  .cardText {
+    margin: 2%;
+    font-size: 1.5rem;
+  }
+
+  .bottom {
+    visibility: hidden;
+  }
+
+  .mobile_bottom {
+    visibility: visible;
+    margin-left: 20%;
+  }
+
+  .social_media_logo {
+    width: 10%;
+    height: 10%;
+    margin: 4%;
+
+  }
+}

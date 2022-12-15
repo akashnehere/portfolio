@@ -1,0 +1,15 @@
+.exp_box {
+    margin: 2%;
+    /* padding: 40px; */
+    display: flex;
+    border: 10%;
+    border-color: white;
+    border-style: dashed;
+    /* border-radius: 10%; */
+    display: flex;
+
+}
+
+.title {
+    font-size: 1.5rem;
+}
