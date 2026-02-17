@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Akash Nehere logo</title>
+  <desc id="desc">Rounded square monogram logo with letters A and N.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#64ffda"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e6fffb"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bg)"/>
+  <path d="M37 89L56 39L75 89" fill="none" stroke="url(#stroke)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M44 69H68" fill="none" stroke="url(#stroke)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M81 87V41L103 87V41" fill="none" stroke="url(#stroke)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
