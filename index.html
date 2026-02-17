@@ -65,6 +65,9 @@
           </nav>
 
           <div class="nav-cta">
+            <button id="themeCycleBtn" class="theme-cycle-btn" type="button" aria-label="Theme mode: Auto" title="Theme mode: Auto">
+              <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+            </button>
             <a class="btn primary" href="#contact">Let’s talk</a>
             <button class="menu" id="menuBtn" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
               <i class="fa-solid fa-bars"></i>
@@ -159,7 +162,7 @@
       </section>
 
       <!-- About -->
-      <section id="about">
+      <section id="about" class="section-block">
         <div class="section-title">
           <h2>About</h2>
           <div class="mono muted2">"Simple things, done thoroughly."</div>
@@ -203,7 +206,7 @@
       </section>
 
       <!-- Highlights -->
-      <section id="highlights">
+      <section id="highlights" class="section-block">
         <div class="section-title">
           <h2>Highlights</h2>
           <div class="mono muted2">Selected wins, not a full autobiography.</div>
@@ -252,7 +255,7 @@
       </section>
 
       <!-- Skills -->
-      <section id="skills">
+      <section id="skills" class="section-block">
         <div class="section-title">
           <h2>Skills</h2>
           <div class="mono muted2">Breadth, with strong depth in Java & Spring.</div>
@@ -282,7 +285,7 @@
       </section>
 
       <!-- Projects -->
-      <section id="projects">
+      <section id="projects" class="section-block">
         <div class="section-title">
           <h2>Projects</h2>
           <div class="mono muted2">A few that shaped my engineering taste.</div>
@@ -331,10 +334,15 @@
       </section>
 
       <!-- Travel -->
-      <section id="travel">
+      <section id="travel" class="section-block">
         <div class="section-title">
           <h2>Travel</h2>
           <div class="mono muted2">My other system is a backpack.</div>
+        </div>
+        <div class="travel-track" aria-hidden="true">
+          <span class="travel-dot"></span>
+          <span class="travel-bike"><i class="fa-solid fa-motorcycle"></i></span>
+          <span class="travel-dot"></span>
         </div>
 
         <div class="card">
@@ -404,7 +412,7 @@
       </section>
 
       <!-- Contact -->
-      <section id="contact">
+      <section id="contact" class="section-block">
         <div class="section-title">
           <h2>Contact</h2>
           <div class="mono muted2">Open to backend / platform roles.</div>
