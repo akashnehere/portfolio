@@ -1,153 +1,127 @@
-// Mobile navigation toggle (shown on smaller screens).
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
-const header = document.querySelector('.header');
-const root = document.documentElement;
-const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 const themeCycleBtn = document.getElementById('themeCycleBtn');
-const THEME_MODE_KEY = 'portfolio-theme-mode';
-const supportsMatchMedia = typeof window.matchMedia === 'function';
-const darkScheme = supportsMatchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
-let themeMode = 'auto';
-const THEME_ORDER = ['auto', 'light', 'dark'];
-const THEME_ICON_HTML = {
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+const THEME_KEY = 'portfolio-theme-mode';
+const THEME_ORDER = ['auto', 'dark', 'light'];
+const THEME_ICONS = {
   auto: '<i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>',
-  light: '<i class="fa-regular fa-sun" aria-hidden="true"></i>',
-  dark: '<i class="fa-regular fa-moon" aria-hidden="true"></i>'
+  dark: '<i class="fa-regular fa-moon" aria-hidden="true"></i>',
+  light: '<i class="fa-regular fa-sun" aria-hidden="true"></i>'
 };
 
-const setTheme = (theme) => {
-  root.setAttribute('data-theme', theme);
-  if (themeColorMeta) {
-    themeColorMeta.setAttribute('content', theme === 'dark' ? '#0b0f19' : '#f8fafc');
+const media = typeof window.matchMedia === 'function'
+  ? window.matchMedia('(prefers-color-scheme: dark)')
+  : null;
+
+let themeMode = 'auto';
+
+const readStore = (key, fallback = null) => {
+  try {
+    const value = window.localStorage.getItem(key);
+    return value == null ? fallback : value;
+  } catch {
+    return fallback;
   }
 };
 
-const getThemeByTime = () => {
+const writeStore = (key, value) => {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Ignore storage failures.
+  }
+};
+
+const themeByTime = () => {
   const hour = new Date().getHours();
   return hour >= 7 && hour < 19 ? 'light' : 'dark';
 };
 
-const resolveTheme = () => {
-  if (themeMode === 'light' || themeMode === 'dark') return themeMode;
-  if (darkScheme) return darkScheme.matches ? 'dark' : 'light';
-  return getThemeByTime();
+const resolvedTheme = () => {
+  if (themeMode === 'dark' || themeMode === 'light') return themeMode;
+  if (media) return media.matches ? 'dark' : 'light';
+  return themeByTime();
 };
 
-const applyThemeMode = () => {
-  const appliedTheme = resolveTheme();
-  setTheme(appliedTheme);
+const applyTheme = () => {
+  const applied = resolvedTheme();
+  document.documentElement.setAttribute('data-theme', applied);
+
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute('content', applied === 'dark' ? '#0f172a' : '#f7faff');
+  }
+
   if (!themeCycleBtn) return;
-  themeCycleBtn.innerHTML = THEME_ICON_HTML[themeMode] || THEME_ICON_HTML.auto;
-  const modeText = `${themeMode.charAt(0).toUpperCase()}${themeMode.slice(1)}`;
-  themeCycleBtn.setAttribute('aria-label', modeText);
-  themeCycleBtn.setAttribute('title', modeText);
+  themeCycleBtn.innerHTML = THEME_ICONS[themeMode] || THEME_ICONS.auto;
+  const label = themeMode.charAt(0).toUpperCase() + themeMode.slice(1);
+  themeCycleBtn.setAttribute('title', label);
+  themeCycleBtn.setAttribute('aria-label', label);
 };
 
-const saveThemeMode = () => {
-  try {
-    window.localStorage.setItem(THEME_MODE_KEY, themeMode);
-  } catch (_) {
-    // Ignore storage failures in private/restricted contexts.
+const initTheme = () => {
+  const stored = readStore(THEME_KEY, 'auto');
+  if (THEME_ORDER.includes(stored)) {
+    themeMode = stored;
   }
+  applyTheme();
 };
 
-const loadThemeMode = () => {
-  try {
-    const stored = window.localStorage.getItem(THEME_MODE_KEY);
-    if (stored === 'auto' || stored === 'light' || stored === 'dark') {
-      themeMode = stored;
-    }
-  } catch (_) {
-    // Ignore storage failures and use default.
-  }
-};
-
-loadThemeMode();
-applyThemeMode();
-
-if (darkScheme) {
-  const onSystemThemeChange = () => {
-    if (themeMode === 'auto') applyThemeMode();
-  };
-  if (typeof darkScheme.addEventListener === 'function') {
-    darkScheme.addEventListener('change', onSystemThemeChange);
-  } else if (typeof darkScheme.addListener === 'function') {
-    darkScheme.addListener(onSystemThemeChange);
-  }
-} else {
-  window.setInterval(() => {
-    if (themeMode === 'auto') applyThemeMode();
-  }, 60 * 60 * 1000);
-}
+initTheme();
 
 if (themeCycleBtn) {
   themeCycleBtn.addEventListener('click', () => {
-    const currentIndex = THEME_ORDER.indexOf(themeMode);
-    const nextIndex = (currentIndex + 1) % THEME_ORDER.length;
-    themeMode = THEME_ORDER[nextIndex];
-    saveThemeMode();
-    applyThemeMode();
+    const index = THEME_ORDER.indexOf(themeMode);
+    themeMode = THEME_ORDER[(index + 1) % THEME_ORDER.length];
+    writeStore(THEME_KEY, themeMode);
+    applyTheme();
   });
 }
 
+if (media) {
+  const onChange = () => {
+    if (themeMode === 'auto') applyTheme();
+  };
+  if (typeof media.addEventListener === 'function') {
+    media.addEventListener('change', onChange);
+  } else if (typeof media.addListener === 'function') {
+    media.addListener(onChange);
+  }
+} else {
+  window.setInterval(() => {
+    if (themeMode === 'auto') applyTheme();
+  }, 60 * 60 * 1000);
+}
+
 if (menuBtn && mobileMenu) {
-  const setMenuState = (isOpen) => {
-    mobileMenu.classList.toggle('open', isOpen);
-    menuBtn.setAttribute('aria-expanded', String(isOpen));
-    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  const setOpen = (open) => {
+    mobileMenu.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
 
   menuBtn.addEventListener('click', () => {
-    const isOpen = !mobileMenu.classList.contains('open');
-    setMenuState(isOpen);
+    setOpen(!mobileMenu.classList.contains('open'));
   });
 
   mobileMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      setMenuState(false);
-    });
+    link.addEventListener('click', () => setOpen(false));
   });
 
   document.addEventListener('click', (event) => {
     if (!mobileMenu.classList.contains('open')) return;
     if (mobileMenu.contains(event.target) || menuBtn.contains(event.target)) return;
-    setMenuState(false);
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      setMenuState(false);
-    }
+    setOpen(false);
   });
 }
 
-// Keep copyright year current.
 const year = document.getElementById('year');
 if (year) {
   year.textContent = String(new Date().getFullYear());
 }
 
-// Subtle header state change after scroll.
-const syncHeaderState = () => {
-  if (!header) return;
-  header.classList.toggle('scrolled', window.scrollY > 18);
-};
-
-syncHeaderState();
-window.addEventListener('scroll', syncHeaderState, { passive: true });
-
-// Scroll reveal transitions inspired by modern portfolio motion patterns.
-const revealGroups = document.querySelectorAll('section');
-revealGroups.forEach((section) => {
-  const targets = section.querySelectorAll('.section-title, .card, .tile, .journey-feature, .trip-card');
-  targets.forEach((el, index) => {
-    el.setAttribute('data-reveal', '');
-    el.style.setProperty('--reveal-delay', `${Math.min(index * 70, 280)}ms`);
-  });
-});
-
-const revealTargets = document.querySelectorAll('[data-reveal]');
+const revealNodes = document.querySelectorAll('[data-reveal]');
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
     (entries, obs) => {
@@ -160,12 +134,11 @@ if ('IntersectionObserver' in window) {
     { threshold: 0.2, rootMargin: '0px 0px -8% 0px' }
   );
 
-  revealTargets.forEach((el) => observer.observe(el));
+  revealNodes.forEach((node) => observer.observe(node));
 } else {
-  revealTargets.forEach((el) => el.classList.add('is-visible'));
+  revealNodes.forEach((node) => node.classList.add('is-visible'));
 }
 
-// Travel bike animation trigger when section enters viewport.
 const travelSection = document.getElementById('travel');
 if (travelSection && 'IntersectionObserver' in window) {
   const travelObserver = new IntersectionObserver(
@@ -178,5 +151,6 @@ if (travelSection && 'IntersectionObserver' in window) {
     },
     { threshold: 0.35 }
   );
+
   travelObserver.observe(travelSection);
 }

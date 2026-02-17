@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en">
 <head>
-  <!-- Core SEO + social metadata -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Akash Nehere is a Senior Full-Stack Engineer focused on Java, Spring Boot, microservices, and Angular, with 6+ years of experience.">
-  <meta name="keywords"
-    content="Akash Nehere, Java, Spring Boot, Angular, Microservices, Full-Stack Engineer, Portfolio">
+  <meta name="description" content="Akash Nehere - Senior Full-Stack Engineer specializing in Java, Spring Boot, microservices, and Angular.">
+  <meta name="keywords" content="Akash Nehere, Java, Spring Boot, Angular, Microservices, Full-Stack Engineer, Portfolio">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#0b0f19">
+  <meta name="theme-color" content="#0f172a">
   <title>Akash Nehere | Full-Stack Engineer</title>
 
   <meta property="og:title" content="Akash Nehere | Full-Stack Engineer">
-  <meta property="og:description"
-    content="Senior full-stack engineer building scalable Java and Spring Boot systems with modern web UIs.">
+  <meta property="og:description" content="Senior full-stack engineer building scalable Java and Spring Boot systems with modern web UIs.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Akash Nehere Portfolio">
@@ -23,445 +18,199 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Akash Nehere | Full-Stack Engineer">
-  <meta name="twitter:description"
-    content="Senior full-stack engineer building scalable Java and Spring Boot systems with modern web UIs.">
+  <meta name="twitter:description" content="Senior full-stack engineer building scalable Java and Spring Boot systems with modern web UIs.">
   <meta name="twitter:image" content="images/akash-logo.svg">
 
-  <!-- Fonts and styles -->
   <link rel="icon" type="image/svg+xml" href="images/akash-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
-  <!-- Page wrapper to sit above decorative background layer -->
-  <div class="wrap">
-    <a href="#main" class="skip-link">Skip to
-      content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Sticky top navigation -->
-    <header class="header">
-      <div class="container">
-        <div class="nav">
-          <a class="brand" href="#main" aria-label="Akash Nehere home">
-            <img class="brand-logo" src="images/akash-logo.svg" alt="Akash Nehere logo">
-            <span>Akash Nehere</span>
-          </a>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#main" aria-label="Akash Nehere home">
+        <img class="brand-logo" src="images/akash-logo.svg" alt="Akash Nehere logo">
+        <span>Akash Nehere</span>
+      </a>
 
-          <nav class="navlinks" aria-label="Primary">
-            <a href="#about">About</a>
-            <a href="#highlights">Highlights</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#travel">Travel</a>
-            <a href="#contact">Contact</a>
-          </nav>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#travel">Travel</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-          <div class="nav-cta">
-            <button id="themeCycleBtn" class="theme-cycle-btn" type="button" aria-label="Theme mode: Auto" title="Theme mode: Auto">
-              <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
-            </button>
-            <a class="btn primary" href="#contact">Let’s talk</a>
-            <button class="menu" id="menuBtn" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="mobile" id="mobileMenu">
-          <a href="#about">About</a>
-          <a href="#highlights">Highlights</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#travel">Travel</a>
-          <a href="#contact">Contact</a>
-        </div>
+      <div class="nav-actions">
+        <button id="themeCycleBtn" class="icon-btn" type="button" aria-label="Auto" title="Auto">
+          <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+        </button>
+        <a class="btn primary" href="#contact">Let’s Talk</a>
+        <button class="icon-btn menu" id="menuBtn" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
       </div>
-    </header>
+    </div>
 
-    <!-- Main content -->
-    <main id="main" class="container">
-      <!-- Hero -->
-      <section class="hero">
-        <div class="grid">
-          <div>
-            <div class="kicker">Full-Stack Engineer • Java • Spring Boot • Microservices • Angular</div>
-            <h1>
-              I build calm, scalable systems.
-              <br>
-              And I travel like I debug: curious, methodical, unafraid.
-            </h1>
-            <p class="subtitle">
-              Senior full-stack engineer (6+ years) based in Pune. I ship backend platforms, clean APIs, and modern web
-              UIs.
-              Career highlights include a US patent for secure data erasure of network devices and a production Electron
-              POC integrating Angular UI.
-            </p>
+    <div class="container mobile" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#travel">Travel</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
 
-            <div class="pillrow" aria-label="Core focus areas">
-              <span class="pill">API design & domain modeling</span>
-              <span class="pill">Spring Security + JWT</span>
-              <span class="pill">Performance & reliability</span>
-              <span class="pill">Team leadership & delivery</span>
-            </div>
+  <main id="main" class="container">
+    <section class="hero" data-reveal>
+      <p class="kicker">Full-Stack Engineer • Java • Spring Boot • Microservices • Angular</p>
+      <h1>I build calm, scalable systems.</h1>
+      <p class="subtitle">
+        Senior full-stack engineer (6+ years) based in Pune. I ship backend platforms, clean APIs, and modern web UIs.
+        Career highlights include a US patent for secure data erasure of network devices and a production Electron POC integrating Angular UI.
+      </p>
 
-            <div class="hero-actions">
-              <a class="btn primary" href="#projects"><i class="fa-solid fa-layer-group"></i> View projects</a>
-              <a class="btn" href="mailto:akashnehere@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
-              <a class="btn" href="https://www.linkedin.com/in/akash-nehere" target="_blank"
-                rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-              <a class="btn" href="tel:+919096999403"><i class="fa-solid fa-phone"></i> Call</a>
-            </div>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects"><i class="fa-solid fa-layer-group"></i> View projects</a>
+        <a class="btn" href="mailto:akashnehere@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/akash-nehere" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a class="btn" href="tel:+919096999403"><i class="fa-solid fa-phone"></i> Call</a>
+      </div>
+
+      <div class="pillrow" aria-label="Core focus areas">
+        <span class="pill">API design & domain modeling</span>
+        <span class="pill">Spring Security + JWT</span>
+        <span class="pill">Performance & reliability</span>
+        <span class="pill">Team leadership & delivery</span>
+      </div>
+    </section>
+
+    <section id="about" class="section-block" data-reveal>
+      <div class="section-title">
+        <h2>About</h2>
+        <div class="muted2 mono">"Simple things, done thoroughly."</div>
+      </div>
+      <div class="card two-col">
+        <article class="tile">
+          <h3>What I do</h3>
+          <p>I design and build backend services using Java and Spring Boot, leaning on microservices where they help. I also build Angular UIs with practical component design and predictable state.</p>
+        </article>
+        <article class="tile">
+          <h3>How I work</h3>
+          <p>I prefer crisp requirements, thin APIs, observable systems, and teamwork that is high on ownership. I have led teams, handled production issues, and shipped features end-to-end.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="highlights" class="section-block" data-reveal>
+      <div class="section-title">
+        <h2>Highlights</h2>
+        <div class="muted2 mono">Selected wins.</div>
+      </div>
+      <div class="grid-2">
+        <article class="tile"><h3><i class="fa-solid fa-shield-halved icon-accent"></i> US Patent</h3><p>Inventor of patent US-20220019369-A1 for secure data erasure of network devices.</p></article>
+        <article class="tile"><h3><i class="fa-solid fa-desktop icon-accent"></i> Electron POC</h3><p>Delivered a desktop proof-of-concept integrating command execution and Angular UI.</p></article>
+        <article class="tile"><h3><i class="fa-solid fa-people-group icon-accent"></i> Team Leadership</h3><p>Led a team of 4 engineers and owned delivery from analysis through production support.</p></article>
+        <article class="tile"><h3><i class="fa-solid fa-file-code icon-accent"></i> Template Systems</h3><p>Integrated FreeMarker in production workflows for maintainable template-driven output.</p></article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-block" data-reveal>
+      <div class="section-title">
+        <h2>Skills</h2>
+        <div class="muted2 mono">Depth in Java and Spring.</div>
+      </div>
+      <div class="grid-2">
+        <article class="tile">
+          <h3>Backend</h3>
+          <p>Java, Spring Boot, REST APIs, microservices, Spring Security, JWT, JPA/Hibernate.</p>
+        </article>
+        <article class="tile">
+          <h3>Frontend & Platform</h3>
+          <p>Angular, TypeScript, responsive UI, Git, CI/CD, AWS basics, MySQL.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section-block" data-reveal>
+      <div class="section-title">
+        <h2>Projects</h2>
+        <div class="muted2 mono">Practical outcomes.</div>
+      </div>
+      <div class="bento">
+        <article class="tile bento-feature">
+          <h3>MyBiz: SmartView (B2B E-commerce)</h3>
+          <p>Built full-stack features for contextual offers and recommendation flow based on user history.</p>
+        </article>
+        <article class="tile"><h3>LCNC L3VPN</h3><p>Implemented low-code/no-code L3VPN approach for simpler deployment.</p></article>
+        <article class="tile"><h3>Instore Retail</h3><p>Device diagnostics and valuation platform with service integration.</p></article>
+        <article class="tile"><h3>Kiosk Troubleshooting</h3><p>Multi-threaded guided optimization and issue-resolution workflow.</p></article>
+      </div>
+    </section>
+
+    <section id="travel" class="section-block" data-reveal>
+      <div class="section-title">
+        <h2>Travel</h2>
+        <div class="muted2 mono">My other system is a backpack.</div>
+      </div>
+
+      <div class="travel-track" aria-hidden="true">
+        <span class="travel-dot"></span>
+        <span class="travel-bike"><i class="fa-solid fa-motorcycle"></i></span>
+        <span class="travel-dot"></span>
+      </div>
+
+      <div class="grid-2">
+        <article class="tile tile-wide">
+          <h3>Bike Journey: South India Circuit</h3>
+          <p class="mono muted2">2023-2025</p>
+          <p>Completed in phases across 2023 and 2024, with the major final stretch to Kanyakumari in late 2025.</p>
+        </article>
+        <article class="tile"><h3>Indonesia (Bali)</h3><p class="mono muted2">2023</p><p>Bali-focused exploration across coastlines, neighborhoods, and culture.</p></article>
+        <article class="tile"><h3>Vietnam</h3><p class="mono muted2">Mid 2025</p><p>Street-food trails, city walks, and long transitions.</p></article>
+        <article class="tile"><h3>Kazakhstan</h3><p class="mono muted2">Late 2025</p><p>Wide landscapes and climate shifts that rewarded planning.</p></article>
+        <article class="tile"><h3>Uzbekistan</h3><p class="mono muted2">Late 2025</p><p>Architecture and slow travel focused on attention to detail.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="section-block" data-reveal>
+      <div class="section-title">
+        <h2>Contact</h2>
+        <div class="muted2 mono">Open to backend / platform roles.</div>
+      </div>
+      <div class="card two-col">
+        <article class="tile">
+          <h3>Let’s build something stable</h3>
+          <p>If you are hiring for Java/Spring Boot backend or platform roles and want strong delivery ownership, let’s connect.</p>
+          <div class="hero-actions compact">
+            <a class="btn primary" href="mailto:akashnehere@gmail.com"><i class="fa-regular fa-envelope"></i> akashnehere@gmail.com</a>
+            <a class="btn" href="tel:+919096999403"><i class="fa-solid fa-phone"></i> +91 9096999403</a>
           </div>
+        </article>
+        <aside class="tile">
+          <h3>Online</h3>
+          <p><a href="https://www.linkedin.com/in/akash-nehere" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+          <p class="mono muted2">Timezone: Asia/Kolkata</p>
+        </aside>
+      </div>
+    </section>
 
-          <aside class="card" aria-label="Snapshot">
-            <div class="portrait">
-              <div class="mono muted2 section-label">Snapshot
-              </div>
-              <div class="location-title">Pune, India</div>
-              <div class="muted snapshot-copy">
-                Building product-grade platforms by day. Collecting passport stamps and bike-route stories by weekend.
-              </div>
-
-              <div class="statgrid statgrid-spaced">
-                <div class="stat">
-                  <div class="label">US Patent</div>
-                  <div class="value">US-20220019369-A1</div>
-                  <div class="desc">Data erasure for network devices</div>
-                </div>
-                <div class="stat">
-                  <div class="label">Leadership</div>
-                  <div class="value">Team of 4</div>
-                  <div class="desc">Delivery ownership + mentoring</div>
-                </div>
-                <div class="stat">
-                  <div class="label">Focus</div>
-                  <div class="value">Spring + Angular</div>
-                  <div class="desc">Scalable web services & UI</div>
-                </div>
-              </div>
-            </div>
-            <div class="inner">
-              <div class="mono muted2 section-label">Quick
-                links</div>
-              <div class="quick-links">
-                <a class="btn" href="#travel"><i class="fa-solid fa-route"></i> Travel journal</a>
-                <a class="btn" href="#highlights"><i class="fa-solid fa-award"></i> Highlights</a>
-                <a class="btn" href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- About -->
-      <section id="about" class="section-block">
-        <div class="section-title">
-          <h2>About</h2>
-          <div class="mono muted2">"Simple things, done thoroughly."</div>
-        </div>
-        <div class="card">
-          <div class="inner">
-            <div class="twocol">
-              <div class="tile">
-                <h3>What I do</h3>
-                <p>
-                  I design and build backend services using Java and Spring Boot, leaning on microservices patterns
-                  where they help, not because they’re trendy.
-                  I also build Angular UIs with practical component design and predictable state.
-                </p>
-                <div class="tags">
-                  <span class="tag">Java</span>
-                  <span class="tag">Spring Boot</span>
-                  <span class="tag">Microservices</span>
-                  <span class="tag">Angular</span>
-                  <span class="tag">MySQL</span>
-                </div>
-              </div>
-              <div class="tile">
-                <h3>How I work</h3>
-                <p>
-                  I prefer crisp requirements, thin APIs, observable systems, and teamwork that’s low on drama and high
-                  on ownership.
-                  I’ve led a small team, handled production issues, and shipped features end-to-end.
-                </p>
-                <div class="tags">
-                  <span class="tag">API Contracts</span>
-                  <span class="tag">Spring Security</span>
-                  <span class="tag">JWT</span>
-                  <span class="tag">CI/CD</span>
-                  <span class="tag">Code Reviews</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Highlights -->
-      <section id="highlights" class="section-block">
-        <div class="section-title">
-          <h2>Highlights</h2>
-          <div class="mono muted2">Selected wins, not a full autobiography.</div>
-        </div>
-
-        <div class="twocol">
-          <div class="tile">
-            <h3><i class="fa-solid fa-shield-halved icon-accent"></i> US Patent</h3>
-            <p class="muted">
-              Inventor of a patent for data erasure of network devices, focused on reliability and secure handling of
-              device data.
-            </p>
-            <div class="tags"><span class="tag">Security</span><span class="tag">Reliability</span><span
-                class="tag">Systems</span></div>
-          </div>
-
-          <div class="tile">
-            <h3><i class="fa-solid fa-desktop icon-accent"></i> Electron POC</h3>
-            <p class="muted">
-              Delivered a proof of concept using Electron with Angular UI integration, including console command
-              execution and output parsing.
-            </p>
-            <div class="tags"><span class="tag">Electron</span><span class="tag">Angular</span><span
-                class="tag">Node.js</span></div>
-          </div>
-
-          <div class="tile">
-            <h3><i class="fa-solid fa-people-group icon-accent"></i> Team leadership</h3>
-            <p class="muted">
-              Led a team of 4 engineers and owned delivery across analysis, development, and production support.
-            </p>
-            <div class="tags"><span class="tag">Ownership</span><span class="tag">Mentoring</span><span
-                class="tag">Delivery</span></div>
-          </div>
-
-          <div class="tile">
-            <h3><i class="fa-solid fa-file-code icon-accent"></i> Template-driven systems</h3>
-            <p class="muted">
-              Integrated FreeMarker into a production system to improve template-driven content generation and
-              maintainability.
-            </p>
-            <div class="tags"><span class="tag">FreeMarker</span><span class="tag">Maintainability</span><span
-                class="tag">Production</span></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section id="skills" class="section-block">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <div class="mono muted2">Breadth, with strong depth in Java & Spring.</div>
-        </div>
-        <div class="card">
-          <div class="inner">
-            <div class="twocol">
-              <div class="tile">
-                <h3>Backend</h3>
-                <p>Java, Spring Boot, REST APIs, Microservices patterns, Spring Security, JWT, JPA/Hibernate.</p>
-                <div class="tags">
-                  <span class="tag">Spring Boot</span><span class="tag">Spring Security</span><span
-                    class="tag">JPA</span><span class="tag">REST</span>
-                </div>
-              </div>
-              <div class="tile">
-                <h3>Frontend & Platform</h3>
-                <p>Angular, TypeScript, component-driven UI, responsive design. Git, CI/CD, AWS basics, MySQL.</p>
-                <div class="tags">
-                  <span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">MySQL</span><span
-                    class="tag">CI/CD</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" class="section-block">
-        <div class="section-title">
-          <h2>Projects</h2>
-          <div class="mono muted2">A few that shaped my engineering taste.</div>
-        </div>
-
-        <div class="twocol">
-          <div class="tile">
-            <h3>MyBiz: SmartView (B2B E-commerce)</h3>
-            <p>
-              Built full-stack features in a telecom B2B platform. SmartView provided offers and recommendations based
-              on user history.
-            </p>
-            <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Angular</span><span
-                class="tag">MySQL</span></div>
-          </div>
-
-          <div class="tile">
-            <h3>LCNC L3VPN</h3>
-            <p>
-              Implemented an L3VPN solution using a low-code/no-code approach to simplify configuration and reduce
-              deployment effort.
-            </p>
-            <div class="tags"><span class="tag">Networking</span><span class="tag">LCNC</span><span
-                class="tag">Design</span></div>
-          </div>
-
-          <div class="tile">
-            <h3>Instore Retail: Diagnostics & Valuation</h3>
-            <p>
-              Desktop application to diagnose mobile devices and calculate trade-in value, backed by web services
-              collecting device data.
-            </p>
-            <div class="tags"><span class="tag">Java</span><span class="tag">Angular</span><span class="tag">REST
-                APIs</span></div>
-          </div>
-
-          <div class="tile">
-            <h3>Kiosk: Guided troubleshooting</h3>
-            <p>
-              Multi-threaded solution guiding customers through device optimization and minor issue resolution.
-            </p>
-            <div class="tags"><span class="tag">Multithreading</span><span class="tag">Java</span><span
-                class="tag">UX</span></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Travel -->
-      <section id="travel" class="section-block">
-        <div class="section-title">
-          <h2>Travel</h2>
-          <div class="mono muted2">My other system is a backpack.</div>
-        </div>
-        <div class="travel-track" aria-hidden="true">
-          <span class="travel-dot"></span>
-          <span class="travel-bike"><i class="fa-solid fa-motorcycle"></i></span>
-          <span class="travel-dot"></span>
-        </div>
-
-        <div class="card">
-          <div class="inner">
-            <div class="travel-board">
-              <article class="journey-feature">
-                <div class="journey-head">
-                  <h3>Bike Journey: South India Circuit</h3>
-                  <span class="date-chip">2023-2025</span>
-                </div>
-                <p>
-                  Completed in phases across 2023 and 2024, with the major final stretch to the southern end of India,
-                  Kanyakumari, in late 2025.
-                </p>
-                <p class="muted2">
-                  Route planning, checkpoints, weather calls, and recovery windows were handled like an engineering runbook.
-                </p>
-              </article>
-
-              <div class="travel-grid">
-                <article class="trip-card">
-                  <div class="top">
-                    <div class="where">Indonesia (Bali)</div>
-                    <div class="when">2023</div>
-                  </div>
-                  <p>Explored Bali and focused on slower days around local neighborhoods, coastlines, and cultural spots.</p>
-                </article>
-
-                <article class="trip-card">
-                  <div class="top">
-                    <div class="where">Vietnam</div>
-                    <div class="when">Mid 2025</div>
-                  </div>
-                  <p>Street-food trails, city walks, and long overland transitions sharpened adaptability and planning pace.</p>
-                </article>
-
-                <article class="trip-card">
-                  <div class="top">
-                    <div class="where">Kazakhstan</div>
-                    <div class="when">Late 2025</div>
-                  </div>
-                  <p>Wide open landscapes and climate shifts made for a calm reset and a stronger bias toward simple plans.</p>
-                </article>
-
-                <article class="trip-card">
-                  <div class="top">
-                    <div class="where">Uzbekistan</div>
-                    <div class="when">Late 2025</div>
-                  </div>
-                  <p>Architecture, history, and slower movement days reinforced patience and attention to detail.</p>
-                </article>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="tile">
-              <h3>Why travel shows up on a professional portfolio</h3>
-              <p>
-                It keeps my thinking flexible under constraints: plan fast, adapt calmly, and keep moving with clear next
-                actions.
-                The same pattern helps when production systems need steady troubleshooting.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="section-block">
-        <div class="section-title">
-          <h2>Contact</h2>
-          <div class="mono muted2">Open to backend / platform roles.</div>
-        </div>
-
-        <div class="card">
-          <div class="inner">
-            <div class="twocol">
-              <div class="tile">
-                <h3>Let’s build something stable</h3>
-                <p>
-                  If you’re hiring for Java/Spring Boot backend or platform roles and want someone who owns delivery and
-                  sweats the details, let’s connect.
-                </p>
-                <div class="hero-actions hero-actions-compact">
-                  <a class="btn primary" href="mailto:akashnehere@gmail.com"><i class="fa-regular fa-envelope"></i>
-                    akashnehere@gmail.com</a>
-                  <a class="btn" href="tel:+919096999403"><i class="fa-solid fa-phone"></i> +91 9096999403</a>
-                </div>
-              </div>
-
-              <div class="tile">
-                <h3>Online</h3>
-                <p class="muted">Quick links to reach me.</p>
-                <div class="hero-actions hero-actions-compact">
-                  <a class="btn" href="https://www.linkedin.com/in/akash-nehere" target="_blank"
-                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                  <a class="btn" href="#projects"><i class="fa-solid fa-layer-group"></i> Projects</a>
-                  <a class="btn" href="#travel"><i class="fa-solid fa-route"></i> Travel</a>
-                </div>
-                <div class="mono muted2 timezone">Timezone: Asia/Kolkata</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer>
-        <div class="divider"></div>
-        <div class="muted2 footer-row">
-          <span>© <span id="year"></span> Akash Nehere</span>
-          <span class="mono">Built with HTML + CSS (no frameworks)</span>
-        </div>
-      </footer>
-    </main>
-  </div>
+    <footer class="footer">
+      <div class="divider"></div>
+      <div class="footer-row muted2">
+        <span>© <span id="year"></span> Akash Nehere</span>
+        <span class="mono">Built with HTML + CSS + JS</span>
+      </div>
+    </footer>
+  </main>
 
   <script src="assets/js/script.js"></script>
 </body>
-
 </html>
